@@ -1,5 +1,5 @@
 <?php
-    include '../model/film.php';
+    include 'model/film.php';
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +11,7 @@
     <title>Document</title>
 </head>
 <body>
+<?php include 'view/menu.php' ?>
     <h1>Ajout d'un film</h1>
     <form action="" method="POST">
         Titre : <input type="text" name="titre"><br/>

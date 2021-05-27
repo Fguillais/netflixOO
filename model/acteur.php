@@ -1,14 +1,16 @@
 <?php
     class Acteur {
-        public string $nom = "";
-        public string $prenom = "";
-        public int $age = 0;
+        public string $nom;
+        public string $prenom;
+        public int $age;
+        private $birthDate;
 
-        public function __construct($_nom, $_prenom, $_age)
+        public function __construct($_nom, $_prenom, $_age, $_birthDate)
         {
             $this->nom = $_nom;
             $this->prenom = $_prenom;
             $this->age = $_age;
+            $this->birthDate = $_birthDate;
         }
         public function afficherNom()
         {
@@ -21,6 +23,14 @@
         public function afficherAge()
         {
             return $this->age;
+        }
+        public function afficherDate()
+        {
+            $timestamp = strtotime($this->birthDate);
+
+            $date = date('d/m/Y', $timestamp);
+
+            return $date;
         }
         }
 ?>
