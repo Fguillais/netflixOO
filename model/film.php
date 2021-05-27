@@ -4,6 +4,12 @@ class Film {
     public int $startYear = 1989;
     public int $runtimeMinutes = 96;
 
+    public function creerFilm()
+    {
+        $this->title = $_POST['titre'];
+        $this->startYear = $_POST['annee'];
+        $this->runtimeMinutes = $_POST['duree'];
+    }
     public function afficherTilte()
     {
         echo $this->title;
