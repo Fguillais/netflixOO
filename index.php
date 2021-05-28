@@ -4,11 +4,11 @@ if(!empty($_GET)):
 
     switch ($_GET['action']):
         case 'filmList' : 
-            require_once('view/acteurAdd.php');
+            require_once('view/film.php');
             break;
 
         case 'actorList' : 
-            require_once('view/film.php');
+            require_once('view/acteurAdd.php');
             break;
 
         default :

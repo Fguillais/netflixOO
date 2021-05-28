@@ -16,18 +16,21 @@
     <form action="" method="POST">
         Nom : <input type="text" name="nom"><br/>
         Prénom : <input type="text" name="prenom"><br/>
-        Age : <input type="text" name="age"><br/>
         Date de naissance : <input type="date" name="date"><br/>
+        Date de decès : <input type="date" name="Ddate"><br/>
         <input type="submit" name="submit"><br/>
     </form>
     <?php
         if (isset($_POST['submit'])) {
-            $newActeur = new Acteur($_POST['nom'], $_POST['prenom'], $_POST['age'], $_POST['date']);
+            $newActeur = new Acteur($_POST['nom'], $_POST['prenom'], $_POST['date'], $_POST['Ddate']);
+            $i =[$newActeur];
             ?>
-                <h3><?php echo $newActeur->afficherNom()  ?></h3>
-                <h4><?php echo $newActeur->afficherPrenom()  ?></h4>
-                <h3><?php echo $newActeur->afficherAge()  ?></h3>
-                <p><?php echo $newActeur->afficherDate()?></p>
+                <h3>Nom : <?php echo $newActeur->afficherNom()  ?></h3>
+                <h4>Prénom : <?php echo $newActeur->afficherPrenom()  ?></h4>
+                <h3>Age : <?php echo $newActeur->afficherAge()  ?> ans</h3>
+                <p>Date de naissance : <?php echo $newActeur->afficherDate()?></p>
+                <p>Date de decès : <?php echo $newActeur->afficherMort() ?></p>
+                <p>Mort depuis : <?php echo $newActeur->mortOuVivant() ?> ans</p>
         <?php
         }
     ?>
