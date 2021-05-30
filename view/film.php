@@ -24,6 +24,7 @@
             $newFilm = new Film;
             $newFilm -> creerFilm();
             ?>
+                <hr>
                 <h3>Titre : <?php $newFilm->afficherTilte()  ?></h3>
                 <h4>Année de sortie : <?php $newFilm->afficherYear()  ?></h4>
                 <h3>Durée du film : <?php echo $newFilm->afficherTime()  ?></h3>
